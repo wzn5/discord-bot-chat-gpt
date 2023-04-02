@@ -5,7 +5,7 @@
 1. Clone the repository to the current directory
 
 ```powershell
-git clone https://github.com/wzn6/discord-bot-chat-gpt.git .
+git clone https://github.com/wzn6/discord-bot-chat-gpt .
 ```
 
 2. Install all the dependencies
