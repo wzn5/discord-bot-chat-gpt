@@ -14,14 +14,11 @@ const client = new Client({
 client.on("ready", () => {
   const atividade = [
     {
-      name: `${client.guilds.cache.size.toLocaleString()} Guilds`,
+      name: `Hello World`,
       type: 2,
     },
     {
-      name: `${client.guilds.cache
-        .map((g) => g.memberCount)
-        .reduce((x, f) => x + f, 0)
-        .toLocaleString()} Users`,
+      name: `Chat Got Bot`,
       type: 2,
     },
   ];
@@ -92,8 +89,7 @@ client.on("messageCreate", async (message) => {
       .catch((error) => {
         console.log(`OPENAI ERR: ${error}`);
       });
-    let responseMessage = result.data.choices[0].message;
-    //utf-8
+    let responseMessage = result.data.choices[0].message;
     if (responseMessage.length >= 2000) {
       const attachment = new AttachmentBuilder(
         Buffer.from(responseMessage, "utf-8"),
